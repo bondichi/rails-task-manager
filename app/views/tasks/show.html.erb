@@ -3,5 +3,9 @@
 </h1>
 <p><%= @task.details %></p>
 
-<%= link_to("Back to Task List", "/tasks") %>
+<%= link_to "Edit this Task", task_edit_path(@task)  %>
+
+<%= link_to "Back to Task List", tasks_path %>
+
+<%= link_to "Delete", delete_task_path(@task), method: 'delete' %>
 
