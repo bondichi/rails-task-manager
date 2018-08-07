@@ -4,10 +4,10 @@
 <%@tasks.each do |task|  %>
 
   <h3>
-    <a href="/tasks/<%=task.id%>">
+    <%= link_to task_path(task) do %>
       <%= raw task.completed ? "<i class='fas fa-check-circle'></i>" : "<i class='far fa-circle'></i>" %>
       <%= task.title%>
-    </a>
+    <% end %>
   </h3>
 
 <%end%>
