@@ -1,0 +1,15 @@
+<h1>My tasks</h1>
+
+
+<%@tasks.each do |task|  %>
+
+  <h3>
+    <a href="/tasks/<%=task.id%>">
+      <%= raw task.completed ? "<i class='fas fa-check-circle'></i>" : "<i class='far fa-circle'></i>" %>
+      <%= task.title%>
+    </a>
+  </h3>
+
+<%end%>
+
+
